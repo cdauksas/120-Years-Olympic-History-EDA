@@ -8,7 +8,7 @@
 SELECT TOP 10 *
 FROM PortfolioProject.dbo.athlete_events$
 ```
-[](Photo1)
+[](https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture1.png)
 
 - Brief overview of the noc_regions table
 ```SQL
