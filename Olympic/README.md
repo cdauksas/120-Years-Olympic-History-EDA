@@ -64,11 +64,11 @@ group by games
       , first_value(total_countries) over(order by total_countries desc)) as Highest_Countries
       from tot_countries
       order by 1;
-      
- ```
-    [](Photo5)
+  ```
+   
+   [](Photo5)
     
-    - What sports were held in every summer olympics?
+ - What sports were held in every summer olympics?
       - First, determine the total number of summer olympics
       - Second, get the unique sport for every summer olympic
       - Third, get the the count of every sport that competed in the summer olympic games
