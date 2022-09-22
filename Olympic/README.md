@@ -65,7 +65,7 @@ group by games
       from tot_countries
       order by 1;
   ```
-   
+   OUTPUT:
    ![](https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture5.png)
     
  - What sports were held in every summer olympics?
