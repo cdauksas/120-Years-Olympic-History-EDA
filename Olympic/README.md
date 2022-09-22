@@ -8,14 +8,25 @@
 SELECT TOP 10 *
 FROM PortfolioProject.dbo.athlete_events$
 ```
+Output:
+
 ![](https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture1.png)
+																	
+
 
 - Brief overview of the noc_regions table
 ```SQL
 SELECT TOP 10 * 
 FROM PortfolioProject.dbo.noc_regions$
 ```
+Output:
+
 ![](https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture2.png)
+																				`
+																				`
+																				`
+
+
 
 - How many olympics games have been held so far?
 
@@ -23,8 +34,12 @@ FROM PortfolioProject.dbo.noc_regions$
 SELECT COUNT(Distinct games) as total_olympic_games
 FROM PortfolioProject.dbo.athlete_events$
 ```
+Output:
 
 ![](https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture3.png)
+
+
+
 
 - What were the total number of nations that participated in each olympic games?
 
@@ -39,8 +54,13 @@ from all_countries
 group by games
     order by games;
 ```
+Output:
 
 ![](https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture4.png)
+
+
+
+
 
 - Which year saw the highest and lowest number of countries participating in olympics?
 
@@ -65,7 +85,8 @@ group by games
       from tot_countries
       order by 1;
   ```
-   OUTPUT:
+   Output:
+   
    ![](https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture5.png)
     
  - What sports were held in every summer olympics?
@@ -96,6 +117,8 @@ where cnt = 29
     
 ```
  - These sports were played in all 29 summer olympic games
+ 
+ 
 ![](https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture6.png) 
 
  - What were the total sports played in each olympic game?
@@ -112,6 +135,7 @@ where cnt = 29
 	   select * from t2
       order by no_of_sports desc;
 ```
+Output:
 
 ![](https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture7.png)
 
@@ -123,6 +147,8 @@ where cnt = 29
 	  Where medal = 'Gold'
 	  order by Age desc
 ```
+Output:
+
 ![](https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture8.png)
 
  - Select the top 5 athelets who won the most gold medals
@@ -143,6 +169,7 @@ where cnt = 29
 	Select * 
 	from t2;
 ```
+Output:
 
 ![](https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture9.png)
 
@@ -156,4 +183,6 @@ where cnt = 29
 	group by noc, medal
 	order by total_medals desc
 ```
+Output:
+
 ![])(https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture10.png)
