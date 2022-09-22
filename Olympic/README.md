@@ -8,14 +8,14 @@
 SELECT TOP 10 *
 FROM PortfolioProject.dbo.athlete_events$
 ```
-[](https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture1.png)
+![](https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture1.png)
 
 - Brief overview of the noc_regions table
 ```SQL
 SELECT TOP 10 * 
 FROM PortfolioProject.dbo.noc_regions$
 ```
-[](Photo2)
+![](https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture2.png)
 
 - How many olympics games have been held so far?
 
@@ -24,7 +24,7 @@ SELECT COUNT(Distinct games) as total_olympic_games
 FROM PortfolioProject.dbo.athlete_events$
 ```
 
-[](Photo3)
+![](https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture3.png)
 
 - What were the total number of nations that participated in each olympic games?
 
@@ -40,7 +40,7 @@ group by games
     order by games;
 ```
 
-[](Photo4)
+![](https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture4.png)
 
 - Which year saw the highest and lowest number of countries participating in olympics?
 
@@ -66,7 +66,7 @@ group by games
       order by 1;
   ```
    
-   [](Photo5)
+   ![](https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture5.png)
     
  - What sports were held in every summer olympics?
       - First, determine the total number of summer olympics
@@ -96,7 +96,7 @@ where cnt = 29
     
 ```
  - These sports were played in all 29 summer olympic games
-[](Photo6) 
+![](https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture6.png) 
 
  - What were the total sports played in each olympic game?
 ```SQL
@@ -113,7 +113,7 @@ where cnt = 29
       order by no_of_sports desc;
 ```
 
-[](Photo7)
+![](https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture7.png)
 
  - Fetch oldest atheletes to win a gold medal
  
@@ -123,7 +123,7 @@ where cnt = 29
 	  Where medal = 'Gold'
 	  order by Age desc
 ```
-[](photo8)
+![](https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture8.png)
 
  - Select the top 5 athelets who won the most gold medals
 
@@ -144,7 +144,7 @@ where cnt = 29
 	from t2;
 ```
 
-[](Photo9)
+![](https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture9.png)
 
 - List the total Gold, Silver, and Bronze medals won by each country over time
 
@@ -156,4 +156,4 @@ where cnt = 29
 	group by noc, medal
 	order by total_medals desc
 ```
-[])(Photo10)
+![])(https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture9.png)
