@@ -156,4 +156,4 @@ where cnt = 29
 	group by noc, medal
 	order by total_medals desc
 ```
-![])(https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture9.png)
+![])(https://github.com/cdauksas/PortfolioProjects/blob/main/images/Picture10.png)
