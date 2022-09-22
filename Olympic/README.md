@@ -65,14 +65,15 @@ group by games
       from tot_countries
       order by 1;
       
-  ```
+ ```
     [](Photo5)
     
     - What sports were held in every summer olympics?
       - First, determine the total number of summer olympics
       - Second, get the unique sport for every summer olympic
       - Third, get the the count of every sport that competed in the summer olympic games
-    ```SQL
+      
+```SQL
    
 	  With t1 as (
 	  Select count(DISTINCT(Games)) as total_summer_games 
@@ -93,7 +94,7 @@ SELECT cnt, sport
 From t3
 where cnt = 29
     
-    ```
+```
  - These sports were played in all 29 summer olympic games
 [](Photo6) 
 
@@ -113,3 +114,46 @@ where cnt = 29
 ```
 
 [](Photo7)
+
+ - Fetch oldest atheletes to win a gold medal
+ 
+ ```SQL
+	   Select *
+	  From PortfolioProject.dbo.athlete_events$
+	  Where medal = 'Gold'
+	  order by Age desc
+```
+[](photo8)
+
+ - Select the top 5 athelets who won the most gold medals
+
+```SQL
+
+
+ with t1 as
+ (Select Name, Count(1) as Total_Gold_Medals
+	  From PortfolioProject.dbo.athlete_events$
+	  Where Medal = 'Gold'
+	  Group By Name
+	  Order by Total_Gold_Medals desc)
+	  ,
+	t2 as
+		(select * , rank() over(order by Total_Gold_Medals desc) as rnk
+		from t1)
+	Select * 
+	from t2;
+```
+
+[](Photo9)
+
+- List the total Gold, Silver, and Bronze medals won by each country over time
+
+```SQL 
+	
+	SELECT noc, medal, count(1) as total_medals
+	From PortfolioProject.dbo.athlete_events$
+	where medal <> 'NA'
+	group by noc, medal
+	order by total_medals desc
+```
+[])(Photo10)
